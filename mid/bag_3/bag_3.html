@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الحقيبة الثالثة — المرحلة المتوسطة — مراقي المعرفة</title>
+  <meta name="description" content="كتب الحقيبة الثالثة من مكتبة المرحلة المتوسطة في برنامج مراقي المعرفة.">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="icon" type="image/png" href="../../logo.png">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main>
+    <div class="container">
+
+      <nav class="breadcrumb animate-in" aria-label="مسار التنقل">
+        <a href="../../index.html">الرئيسية</a>
+        <span aria-hidden="true">‹</span>
+        <a href="../mid.html">المرحلة المتوسطة</a>
+        <span aria-hidden="true">‹</span>
+        <span aria-current="page">الحقيبة الثالثة</span>
+      </nav>
+
+      <div class="hero" style="padding-top: var(--space-8);">
+        <h1 class="page-title animate-in">
+          الحقيبة <span>الثالثة</span>
+        </h1>
+
+      </div>
+
+      <div class="divider animate-in" aria-hidden="true">✦</div>
+
+      <div class="cards-grid" id="books-grid" role="list" aria-label="كتب الحقيبة الثالثة" aria-live="polite">
+        <div class="loading-state" style="grid-column:1/-1;" id="loading-msg">
+          <div class="loading-spinner" aria-hidden="true"></div>
+          <p>جارٍ تحميل الكتب…</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>برنامج مراقي المعرفة القرائي</p>
+  </footer>
+
+  <script>
+    (function loadHeader() {
+      var root = '../..';
+      fetch('../../header.html')
+        .then(r => { if (!r.ok) throw new Error(); return r.text(); })
+        .then(html => {
+          var ph = document.getElementById('header-placeholder');
+          if (ph) ph.outerHTML = html.replaceAll('PLACEHOLDER_ROOT', root);
+        })
+        .catch(() => {
+          var ph = document.getElementById('header-placeholder');
+          if (ph) ph.innerHTML = `<header id="site-header"><a href="../../index.html"><img src="../../logo.png" alt="شعار مراقي المعرفة" class="logo-img"><span class="logo-text">مراقي المعرفة</span></a></header>`;
+        });
+    })();
+
+    (function loadBooks() {
+      const grid = document.getElementById('books-grid');
+      fetch('books.json')
+        .then(r => { if (!r.ok) throw new Error('books.json: ' + r.status); return r.json(); })
+        .then(books => {
+          grid.innerHTML = '';
+          if (!Array.isArray(books) || books.length === 0) throw new Error('empty');
+          books.forEach((book, idx) => grid.appendChild(buildBookCard(book, idx)));
+        })
+        .catch(err => {
+          grid.innerHTML = `<div class="error-state" style="grid-column:1/-1;" role="alert"><p style="font-size:3rem">📚</p><p>تعذّر تحميل الكتب. تأكد من تشغيل الموقع عبر سيرفر محلي.</p><p style="font-size:var(--text-sm);color:var(--color-text-muted)">${err.message}</p></div>`;
+        });
+    })();
+
+    function buildBookCard(book, idx) {
+      const card = document.createElement('article');
+      card.className = 'book-card animate-in';
+      card.setAttribute('role', 'listitem');
+      card.style.animationDelay = (0.05 + idx * 0.1) + 's';
+
+      const coverWrap = document.createElement('div');
+      coverWrap.className = 'book-cover-wrap';
+      if (book.cover) {
+        const img = document.createElement('img');
+        img.src = book.cover;
+        img.alt = 'غلاف كتاب: ' + book.title;
+        img.loading = 'lazy';
+        img.onerror = function() { this.parentElement.innerHTML = '<div class="book-cover-placeholder" aria-hidden="true">📕</div>'; };
+        coverWrap.appendChild(img);
+      } else {
+        coverWrap.innerHTML = '<div class="book-cover-placeholder" aria-hidden="true">📕</div>';
+      }
+
+      const info = document.createElement('div');
+      info.className = 'book-info';
+
+      if (book.category) {
+        const cat = document.createElement('span');
+        cat.className = 'book-category';
+        cat.textContent = book.category;
+        info.appendChild(cat);
+      }
+
+      const title = document.createElement('h2');
+      title.className = 'book-title';
+      title.textContent = book.title;
+      info.appendChild(title);
+
+      const driveUrl = book.drive_url || book.drive_id;
+      const btn = document.createElement('a');
+      btn.className = 'book-read-btn';
+      btn.href = driveUrl || '#';
+      btn.target = '_blank';
+      btn.rel = 'noopener noreferrer';
+      btn.setAttribute('aria-label', 'قراءة كتاب: ' + book.title);
+      if (!driveUrl) { btn.style.opacity='0.5'; btn.style.pointerEvents='none'; btn.textContent='قريبًا'; }
+      else { btn.textContent = '📖 قراءة'; }
+      info.appendChild(btn);
+
+      card.appendChild(coverWrap);
+      card.appendChild(info);
+      return card;
+    }
+  </script>
+
+</body>
+</html>

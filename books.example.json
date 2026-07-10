@@ -1,0 +1,23 @@
+[
+  {
+    "id": "book1",
+    "title": "اسم الكتاب الأول",
+    "category": "تصنيف الكتاب",
+    "cover": "book1.png",
+    "drive_id": "ضع_هنا_معرف_ملف_Google_Drive"
+  },
+  {
+    "id": "book2",
+    "title": "اسم الكتاب الثاني",
+    "category": "تصنيف الكتاب",
+    "cover": "book2.png",
+    "drive_id": "ضع_هنا_معرف_ملف_Google_Drive"
+  },
+  {
+    "id": "book3",
+    "title": "اسم الكتاب الثالث",
+    "category": "تصنيف الكتاب",
+    "cover": "book3.png",
+    "drive_id": "ضع_هنا_معرف_ملف_Google_Drive"
+  }
+]

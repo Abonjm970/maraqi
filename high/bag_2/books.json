@@ -1,0 +1,23 @@
+[
+  {
+    "id": "book1",
+    "title": "نور الاقتباس في مشكاة وصية النبي ﷺ لابن عباس",
+    "category": "مهاري",
+    "cover": "book1.png",
+    "drive_id": "https://drive.google.com/file/d/1KGe2nOTbZe1557JtBTsN3amN7srrOuSL/view?usp=sharing"
+  },
+  {
+    "id": "book2",
+    "title": "إلى الظل",
+    "category": "مهاري",
+    "cover": "book2.png",
+    "drive_id": "https://drive.google.com/file/d/10SKGrIZJB-DIcOXlIp9y80hlpBJU99JU/view?usp=sharing"
+  },
+  {
+    "id": "book3",
+    "title": "أين نحن من هؤلاء 1",
+    "category": "تراجم",
+    "cover": "book3.png",
+    "drive_id": "https://drive.google.com/file/d/1EFiU445yNOnwbIdSxTKyy4Kn4O99Ga1G/view?usp=sharing"
+  }
+]

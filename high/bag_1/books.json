@@ -1,0 +1,23 @@
+[
+  {
+    "id": "book1",
+    "title": "الانضباط الذاتي",
+    "category": "سلوكي",
+    "cover": "book1.png",
+    "drive_id": "https://drive.google.com/file/d/1vbrCowLEIkpawHcpjXQms0-Ah5e29jsJ/view?usp=sharing"
+  },
+  {
+    "id": "book2",
+    "title": "مواعظ عمر بن عبد العزيز",
+    "category": "إيماني",
+    "cover": "book2.png",
+    "drive_id": "https://drive.google.com/file/d/1DpRqeV8tSqkZkp8o5mcoLCfWMaAUECa5/view?usp=sharing"
+  },
+  {
+    "id": "book3",
+    "title": "سيرة العتيق أبي بكر الصديق",
+    "category": "تراجم",
+    "cover": "book3.png",
+    "drive_id": "https://drive.google.com/file/d/1CbEvrZlsAqPONHlTugXlTTG7MRu0quow/view?usp=sharing"
+  }
+]

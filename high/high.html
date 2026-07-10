@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مكتبة المرحلة الثانوية — مراقي المعرفة</title>
+  <meta name="description" content="حقائب القراءة للمرحلة الثانوية في برنامج مراقي المعرفة — سلوك وإيمان وعلم ومهارات وسيرة.">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/png" href="../logo.png">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <main>
+    <div class="container">
+
+      <!-- مسار التنقل -->
+      <nav class="breadcrumb animate-in" aria-label="مسار التنقل">
+        <a href="../index.html">الرئيسية</a>
+        <span aria-hidden="true">‹</span>
+        <span aria-current="page">المرحلة الثانوية</span>
+      </nav>
+
+      <!-- عنوان الصفحة -->
+      <div class="hero" style="padding-top: var(--space-8);">
+        <h1 class="page-title animate-in">
+          مكتبة <span>المرحلة الثانوية</span>
+        </h1>
+        <p class="page-subtitle animate-in">
+          اختر الحقيبة القرائية التي تريد الاطلاع على كتبها
+        </p>
+      </div>
+
+      <div class="divider animate-in" aria-hidden="true">✦</div>
+
+      <!-- شبكة الحقائب -->
+      <div class="cards-grid" role="list" aria-label="حقائب المرحلة الثانوية">
+
+        <!-- الحقيبة الأولى -->
+        <a href="bag_1/bag_1.html" class="library-card animate-in" role="listitem" aria-label="الحقيبة الأولى: سلوكي وإيماني وتراجم">
+          <div class="card-icon" aria-hidden="true">🌟</div>
+          <h2 class="card-title">الحقيبة الأولى</h2>
+          <div class="card-badge">
+            <span class="badge">سلوكي</span>
+            <span class="badge">إيماني</span>
+            <span class="badge">تراجم</span>
+          </div>
+          <p class="card-desc">
+            بناء الشخصية المسلمة بالسلوك القويم والإيمان الراسخ والاقتداء بالعلماء
+          </p>
+          <span class="card-btn" aria-hidden="true">فتح الحقيبة ←</span>
+        </a>
+
+        <!-- الحقيبة الثانية -->
+        <a href="bag_2/bag_2.html" class="library-card animate-in" role="listitem" aria-label="الحقيبة الثانية: علمي ومهاري وتراجم">
+          <div class="card-icon" aria-hidden="true">🔬</div>
+          <h2 class="card-title">الحقيبة الثانية</h2>
+          <div class="card-badge">
+            <span class="badge">علمي</span>
+            <span class="badge">مهاري</span>
+            <span class="badge">تراجم</span>
+          </div>
+          <p class="card-desc">
+            تعميق المعرفة العلمية الشرعية وتطوير المهارات وسِيَر العلماء
+          </p>
+          <span class="card-btn" aria-hidden="true">فتح الحقيبة ←</span>
+        </a>
+
+        <!-- الحقيبة الثالثة -->
+        <a href="bag_3/bag_3.html" class="library-card animate-in" role="listitem" aria-label="الحقيبة الثالثة: سيرة وإيماني وعلمي">
+          <div class="card-icon" aria-hidden="true">🌙</div>
+          <h2 class="card-title">الحقيبة الثالثة</h2>
+          <div class="card-badge">
+            <span class="badge">سيرة</span>
+            <span class="badge">إيماني</span>
+            <span class="badge">علمي</span>
+          </div>
+          <p class="card-desc">
+            استلهام من السيرة النبوية وتعزيز اليقين وتوسيع الأفق العلمي الشرعي
+          </p>
+          <span class="card-btn" aria-hidden="true">فتح الحقيبة ←</span>
+        </a>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>برنامج مراقي المعرفة القرائي</p>
+  </footer>
+
+  <script>
+    (function loadHeader() {
+      var root = '..';
+      fetch('../header.html')
+        .then(r => { if (!r.ok) throw new Error(); return r.text(); })
+        .then(html => {
+          var ph = document.getElementById('header-placeholder');
+          if (ph) ph.outerHTML = html.replaceAll('PLACEHOLDER_ROOT', root);
+        })
+        .catch(() => {
+          var ph = document.getElementById('header-placeholder');
+          if (ph) ph.innerHTML = `<header id="site-header"><a href="../index.html"><img src="../logo.png" alt="شعار مراقي المعرفة" class="logo-img"><span class="logo-text">مراقي المعرفة</span></a></header>`;
+        });
+    })();
+  </script>
+
+</body>
+</html>

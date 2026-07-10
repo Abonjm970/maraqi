@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مراقي المعرفة — البرنامج القرائي الإسلامي</title>
+  <meta name="description" content="برنامج قرائي إسلامي للطلبة من عمر 12 إلى 19 سنة، يضم مكتبتي المرحلة المتوسطة والثانوية.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+
+  <!-- يُحقن الهيدر هنا بجافاسكربت -->
+  <div id="header-placeholder"></div>
+
+  <main>
+    <!-- قسم الاقتباس -->
+    <section class="hero container">
+      <blockquote class="hero-quote animate-in">
+        فمن طلبَ العلمَ ليحيي به الإسلامَ فهو من الصِّدِّيقين، ودرجتُه بعد درجة النبوَّة.
+        <cite class="hero-quote-source">— مفتاح دار السعادة (١/٣٣٩)</cite>
+      </blockquote>
+    </section>
+
+    <!-- قسم المكتبتين -->
+    <section class="container" aria-labelledby="libraries-heading">
+      <div class="divider" aria-hidden="true">✦</div>
+      <h1 class="page-title" id="libraries-heading" style="text-align:center; margin-bottom: var(--space-3);">
+        اختر <span>مكتبتك</span>
+      </h1>
+      <p class="page-subtitle" style="text-align:center;">
+        اختر المرحلة الدراسية المناسبة للوصول إلى حقائب القراءة
+      </p>
+
+      <div class="cards-grid cards-grid--2col" role="list">
+
+        <!-- بطاقة المتوسط -->
+        <a href="mid/mid.html" class="library-card animate-in" role="listitem" aria-label="مكتبة المرحلة المتوسطة">
+          <div class="card-icon" aria-hidden="true">📗</div>
+          <h2 class="card-title">المرحلة المتوسطة</h2>
+          <p class="card-desc">
+            ثلاث حقائب قرائية متنوعة تشمل التراجم والسلوك والإيمان والأدب
+          </p>
+          <div class="card-badge" aria-label="مجالات الحقائب">
+            <span class="badge">تراجم</span>
+            <span class="badge">سلوك</span>
+            <span class="badge">إيماني</span>
+            <span class="badge">أدبي</span>
+          </div>
+          <span class="card-btn" aria-hidden="true">دخول ←</span>
+        </a>
+
+        <!-- بطاقة الثانوي -->
+        <a href="high/high.html" class="library-card animate-in" role="listitem" aria-label="مكتبة المرحلة الثانوية">
+          <div class="card-icon" aria-hidden="true">📘</div>
+          <h2 class="card-title">المرحلة الثانوية</h2>
+          <p class="card-desc">
+            ثلاث حقائب قرائية تشمل الجانب العلمي والمهاري والسيرة النبوية
+          </p>
+          <div class="card-badge" aria-label="مجالات الحقائب">
+            <span class="badge">سيرة</span>
+            <span class="badge">علمي</span>
+            <span class="badge">مهاري</span>
+            <span class="badge">إيماني</span>
+          </div>
+          <span class="card-btn" aria-hidden="true">دخول ←</span>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>برنامج مراقي المعرفة القرائي</p>
+  </footer>
+
+  <script>
+    // حقن الهيدر المشترك
+    (function loadHeader() {
+      var root = '';
+      fetch('header.html')
+        .then(r => { if (!r.ok) throw new Error('header fetch failed'); return r.text(); })
+        .then(html => {
+          var ph = document.getElementById('header-placeholder');
+          if (ph) ph.outerHTML = html.replaceAll('PLACEHOLDER_ROOT', root || '.');
+        })
+        .catch(() => {
+          var ph = document.getElementById('header-placeholder');
+          if (ph) ph.innerHTML = `<header id="site-header"><a href="index.html"><img src="logo.png" alt="شعار مراقي المعرفة" class="logo-img"><span class="logo-text">مراقي المعرفة</span></a></header>`;
+        });
+    })();
+  </script>
+
+</body>
+</html>
