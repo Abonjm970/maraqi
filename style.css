@@ -412,6 +412,31 @@ footer {
   transform: translateY(0);
 }
 
+.book-reg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  background: transparent;
+  color: var(--color-gold);
+  border: 1.5px solid var(--color-gold);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 700;
+  padding: calc(var(--space-3) - 1.5px) var(--space-4);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.book-reg-btn:hover {
+  background: rgba(201,162,39,0.1);
+  box-shadow: 0 4px 16px rgba(201,162,39,0.2);
+}
+
+
 .card-btn--outline {
   background: transparent;
   color: var(--color-gold);
