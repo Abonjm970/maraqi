@@ -19,5 +19,12 @@
     "category": "تراجم",
     "cover": "book3.png",
     "drive_id": "https://drive.google.com/file/d/1EFiU445yNOnwbIdSxTKyy4Kn4O99Ga1G/view?usp=sharing"
+  },
+  {
+    "table": [
+      { "book": "نور الاقتباس في مشكاة وصية النبي ﷺ لابن عباس", "duration": "9 أيام", "start_date": "الأحد 1/27", "end_date": "الثلاثاء 2/7" },
+      { "book": "إلى الظل",                                       "duration": "10 أيام", "start_date": "الأربعاء 2/8", "end_date": "الأحد 2/19" },
+      { "book": "أين نحن من هؤلاء 1",                            "duration": "15 يوم", "start_date": "الإثنين 2/20", "end_date": "الأربعاء 3/6" }
+    ]
   }
 ]

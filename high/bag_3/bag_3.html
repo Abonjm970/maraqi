@@ -68,12 +68,26 @@
         .then(books => {
           grid.innerHTML = '';
           if (!Array.isArray(books) || books.length === 0) throw new Error('empty');
-          books.forEach((book, idx) => grid.appendChild(buildBookCard(book, idx)));
+          books.forEach((book, idx) => { if (book.table) return; grid.appendChild(buildBookCard(book, idx)); });
+          const tableObj = books.find(b => b.table);
+          if (tableObj && tableObj.table.length) grid.closest('.container').appendChild(buildReadingTable(tableObj.table));
         })
         .catch(err => {
           grid.innerHTML = `<div class="error-state" style="grid-column:1/-1;" role="alert"><p style="font-size:3rem">📚</p><p>تعذّر تحميل الكتب. تأكد من تشغيل الموقع عبر سيرفر محلي.</p><p style="font-size:var(--text-sm);color:var(--color-text-muted)">${err.message}</p></div>`;
         });
     })();
+
+    function buildReadingTable(rows) {
+      const section = document.createElement('section');
+      section.className = 'reading-table-section';
+      const h2 = document.createElement('h2'); h2.textContent = 'جدول خطة القراءة'; section.appendChild(h2);
+      const wrap = document.createElement('div'); wrap.className = 'reading-table-wrap';
+      const table = document.createElement('table'); table.className = 'reading-table'; table.setAttribute('dir','rtl');
+      table.innerHTML = '<thead><tr><th scope="col">الكتاب</th><th scope="col">المدة</th><th scope="col">تاريخ البداية</th><th scope="col">تاريخ النهاية</th></tr></thead>';
+      const tbody = document.createElement('tbody');
+      rows.forEach(row => { const tr = document.createElement('tr'); ['book','duration','start_date','end_date'].forEach(k => { const td = document.createElement('td'); td.textContent = row[k]||''; if(!row[k]) td.setAttribute('data-empty',''); tr.appendChild(td); }); tbody.appendChild(tr); });
+      table.appendChild(tbody); wrap.appendChild(table); section.appendChild(wrap); return section;
+    }
 
     function buildBookCard(book, idx) {
       const card = document.createElement('article');

@@ -19,5 +19,12 @@
     "category": "تراجم",
     "cover": "book3.png",
     "drive_id": "https://drive.google.com/file/d/1CbEvrZlsAqPONHlTugXlTTG7MRu0quow/view?usp=sharing"
+  },
+  {
+    "table": [
+      { "book": "الانضباط الذاتي",            "duration": "4 أيام", "start_date": "الأحد 1/27", "end_date": "الأربعاء 2/1" },
+      { "book": "مواعظ عمر بن عبد العزيز",    "duration": "10 أيام", "start_date": "الخميس 2/2", "end_date": "الإثنين 2/13" },
+      { "book": "سيرة العتيق أبي بكر الصديق", "duration": "20 يوم", "start_date": "الثلاثاء 2/14", "end_date": "الأربعاء 3/6" }
+    ]
   }
 ]

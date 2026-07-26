@@ -682,3 +682,89 @@ footer {
     font-size: var(--text-xl);
   }
 }
+
+/* ══════════════════════════════════════════════════
+   جدول خطة القراءة — .reading-table-section
+   ══════════════════════════════════════════════════ */
+
+.reading-table-section {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+
+.reading-table-section h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  color: var(--color-gold);
+  text-align: center;
+  margin-bottom: var(--space-6);
+  letter-spacing: 0.03em;
+}
+
+.reading-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border);
+}
+
+.reading-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  background: var(--color-surface);
+}
+
+.reading-table thead {
+  background: var(--color-gold);
+}
+
+.reading-table thead th {
+  padding: var(--space-4) var(--space-5);
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--text-sm);
+  text-align: center;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.reading-table tbody tr {
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.18s ease;
+}
+
+.reading-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.reading-table tbody tr:nth-child(even) {
+  background: var(--color-surface-2);
+}
+
+.reading-table tbody tr:hover {
+  background: rgba(201, 162, 39, 0.08);
+}
+
+.reading-table tbody td {
+  padding: var(--space-4) var(--space-5);
+  color: var(--color-text);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.reading-table tbody td:first-child {
+  text-align: right;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .reading-table thead th,
+  .reading-table tbody td {
+    padding: var(--space-3) var(--space-3);
+    font-size: var(--text-sm);
+  }
+}
+

@@ -83,10 +83,19 @@
             throw new Error('empty');
           }
 
+          // بناء بطاقات الكتب (نتجاهل عنصر table)
           books.forEach((book, idx) => {
+            if (book.table) return; // تخطي كائن الجدول
             const card = buildBookCard(book, idx);
             grid.appendChild(card);
           });
+
+          // بناء جدول خطة القراءة
+          const tableObj = books.find(b => b.table);
+          if (tableObj && tableObj.table.length) {
+            const tableSection = buildReadingTable(tableObj.table);
+            grid.closest('.container').appendChild(tableSection);
+          }
         })
         .catch(err => {
           grid.innerHTML = `
@@ -97,6 +106,52 @@
             </div>`;
         });
     })();
+
+    // ── بناء جدول خطة القراءة ──
+    function buildReadingTable(rows) {
+      const section = document.createElement('section');
+      section.className = 'reading-table-section';
+
+      const h2 = document.createElement('h2');
+      h2.textContent = 'جدول خطة القراءة';
+      section.appendChild(h2);
+
+      const wrap = document.createElement('div');
+      wrap.className = 'reading-table-wrap';
+
+      const table = document.createElement('table');
+      table.className = 'reading-table';
+      table.setAttribute('dir', 'rtl');
+
+      // رأس الجدول
+      table.innerHTML = `
+        <thead>
+          <tr>
+            <th scope="col">الكتاب</th>
+            <th scope="col">المدة</th>
+            <th scope="col">تاريخ البداية</th>
+            <th scope="col">تاريخ النهاية</th>
+          </tr>
+        </thead>`;
+
+      const tbody = document.createElement('tbody');
+      rows.forEach(row => {
+        const tr = document.createElement('tr');
+        ['book', 'duration', 'start_date', 'end_date'].forEach(key => {
+          const td = document.createElement('td');
+          td.textContent = row[key] || '';
+          if (!row[key]) td.setAttribute('data-empty', '');
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+
+      table.appendChild(tbody);
+      wrap.appendChild(table);
+      section.appendChild(wrap);
+      return section;
+    }
+
 
     /**
      * بناء بطاقة كتاب واحد
