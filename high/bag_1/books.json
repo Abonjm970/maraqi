@@ -2,6 +2,7 @@
   {
     "id": "book1",
     "title": "الانضباط الذاتي",
+    "author": "",
     "category": "سلوكي",
     "cover": "book1.png",
     "drive_id": "https://drive.google.com/file/d/1vbrCowLEIkpawHcpjXQms0-Ah5e29jsJ/view?usp=sharing"
@@ -9,6 +10,7 @@
   {
     "id": "book2",
     "title": "مواعظ عمر بن عبد العزيز",
+    "author": "",
     "category": "إيماني",
     "cover": "book2.png",
     "drive_id": "https://drive.google.com/file/d/1DpRqeV8tSqkZkp8o5mcoLCfWMaAUECa5/view?usp=sharing"
@@ -16,15 +18,16 @@
   {
     "id": "book3",
     "title": "سيرة العتيق أبي بكر الصديق",
+    "author": "",
     "category": "تراجم",
     "cover": "book3.png",
     "drive_id": "https://drive.google.com/file/d/1CbEvrZlsAqPONHlTugXlTTG7MRu0quow/view?usp=sharing"
   },
   {
     "table": [
-      { "book": "الانضباط الذاتي",            "duration": "4 أيام", "start_date": "الأحد 1/27", "end_date": "الأربعاء 2/1" },
-      { "book": "مواعظ عمر بن عبد العزيز",    "duration": "10 أيام", "start_date": "الخميس 2/2", "end_date": "الإثنين 2/13" },
-      { "book": "سيرة العتيق أبي بكر الصديق", "duration": "20 يوم", "start_date": "الثلاثاء 2/14", "end_date": "الأربعاء 3/6" }
+      { "book": "الانضباط الذاتي",            "duration": "", "start_date": "", "end_date": "", "task": "" },
+      { "book": "مواعظ عمر بن عبد العزيز",    "duration": "", "start_date": "", "end_date": "", "task": "" },
+      { "book": "سيرة العتيق أبي بكر الصديق", "duration": "", "start_date": "", "end_date": "", "task": "" }
     ]
   }
 ]

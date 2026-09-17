@@ -2,6 +2,7 @@
   {
     "id": "book1",
     "title": "حين أضاء الكون",
+    "author": "",
     "category": "سيرة",
     "cover": "book1.png",
     "drive_id": "https://drive.google.com/file/d/1fyGPvTJ0WH1SKx_Tj5A7-eba3pwoD5ki/view?usp=sharing"
@@ -9,6 +10,7 @@
   {
     "id": "book2",
     "title": "الوابل الصيب",
+    "author": "",
     "category": "إيماني",
     "cover": "book2.png",
     "drive_id": "https://drive.google.com/file/d/16Ql-MipaMQtws2R9SfCq96Nvy9Dvcy0a/view?usp=sharing"
@@ -16,15 +18,16 @@
   {
     "id": "book3",
     "title": "مختصر جامع العلوم والحكم",
+    "author": "",
     "category": "علمي",
     "cover": "book3.png",
     "drive_id": "https://drive.google.com/file/d/1GM8gkqH25JB2pqsOkMHU8_AEY0ovnaE5/view?usp=sharing"
   },
   {
     "table": [
-      { "book": "حين أضاء الكون",          "duration": "10 أيام", "start_date": "الأحد 1/27", "end_date": "الأربعاء 2/8" },
-      { "book": "الوابل الصيب",             "duration": "12 يوم", "start_date": "الخميس 2/9", "end_date": "الأربعاء 2/22" },
-      { "book": "مختصر جامع العلوم والحكم", "duration": "12 يوم", "start_date": "الخميس 2/23", "end_date": "الأربعاء 3/6" }
+      { "book": "حين أضاء الكون",          "duration": "", "start_date": "", "end_date": "", "task": "" },
+      { "book": "الوابل الصيب",             "duration": "", "start_date": "", "end_date": "", "task": "" },
+      { "book": "مختصر جامع العلوم والحكم", "duration": "", "start_date": "", "end_date": "", "task": "" }
     ]
   }
 ]

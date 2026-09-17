@@ -2,22 +2,32 @@
   {
     "id": "book1",
     "title": "اسم الكتاب الأول",
+    "author": "اسم المؤلف",
     "category": "تصنيف الكتاب",
     "cover": "book1.png",
-    "drive_id": "ضع_هنا_معرف_ملف_Google_Drive"
+    "drive_id": "ضع_هنا_رابط_ملف_Google_Drive"
   },
   {
     "id": "book2",
     "title": "اسم الكتاب الثاني",
+    "author": "اسم المؤلف",
     "category": "تصنيف الكتاب",
     "cover": "book2.png",
-    "drive_id": "ضع_هنا_معرف_ملف_Google_Drive"
+    "drive_id": "ضع_هنا_رابط_ملف_Google_Drive"
   },
   {
     "id": "book3",
     "title": "اسم الكتاب الثالث",
+    "author": "اسم المؤلف",
     "category": "تصنيف الكتاب",
     "cover": "book3.png",
-    "drive_id": "ضع_هنا_معرف_ملف_Google_Drive"
+    "drive_id": "ضع_هنا_رابط_ملف_Google_Drive"
+  },
+  {
+    "table": [
+      { "book": "اسم الكتاب الأول", "duration": "", "start_date": "", "end_date": "", "task": "" },
+      { "book": "اسم الكتاب الثاني", "duration": "", "start_date": "", "end_date": "", "task": "" },
+      { "book": "اسم الكتاب الثالث", "duration": "", "start_date": "", "end_date": "", "task": "" }
+    ]
   }
 ]

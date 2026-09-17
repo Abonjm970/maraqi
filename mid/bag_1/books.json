@@ -2,6 +2,7 @@
   {
     "id": "book1",
     "title": "قضِّ نهارك مع ابن المبارك",
+    "author": "",
     "category": "تراجم",
     "cover": "book1.png",
     "drive_id": "https://drive.google.com/file/d/1c2rOTUyr2tTyIIiNtH_4phOZXGw3a7xu/view?usp=sharing"
@@ -9,6 +10,7 @@
   {
     "id": "book2",
     "title": "شباب الصحابة",
+    "author": "",
     "category": "تراجم",
     "cover": "book2.png",
     "drive_id": "https://drive.google.com/file/d/1UX5lY_neY0gB9Tn2mfx5ObGaY5SnfWLY/view?usp=sharing"
@@ -16,15 +18,16 @@
   {
     "id": "book3",
     "title": "50 شمعة",
+    "author": "",
     "category": "سلوك",
     "cover": "book3.png",
     "drive_id": "https://drive.google.com/file/d/1PSwwVYwieywnbAnyFgqKLXA3qE4tgmzR/view?usp=sharing"
   },
   {
     "table": [
-      { "book": "قضِّ نهارك مع ابن المبارك", "duration": "7 أيام", "start_date": "الأحد 1/27", "end_date": "الأحد 2/5" },
-      { "book": "شباب الصحابة",               "duration": "10 أيام", "start_date": "الإثنين 2/6", "end_date": "الخميس 2/16" },
-      { "book": "50 شمعة",                    "duration": "14 يوم", "start_date": "الجمعة 2/17", "end_date": "الأحد 3/3" }
+      { "book": "قضِّ نهارك مع ابن المبارك", "duration": "", "start_date": "", "end_date": "", "task": "" },
+      { "book": "شباب الصحابة",               "duration": "", "start_date": "", "end_date": "", "task": "" },
+      { "book": "50 شمعة",                    "duration": "", "start_date": "", "end_date": "", "task": "" }
     ]
   }
 ]

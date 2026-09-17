@@ -1,8 +1,15 @@
 <!-- header.html — الهيدر المشترك، يُحقن بـ fetch() في كل صفحة -->
 <!-- المسارات تُكتب بـ PLACEHOLDER_ROOT ويُستبدل بـ JavaScript -->
 <header id="site-header">
-  <a href="PLACEHOLDER_ROOT/index.html" id="logo-link" aria-label="العودة إلى الصفحة الرئيسية">
-    <img src="PLACEHOLDER_ROOT/logo.png" alt="شعار مراقي المعرفة" class="logo-img" id="logo-img">
-    <span class="logo-text">مراقي المعرفة</span>
-  </a>
+  <div class="header-inner container">
+    <a href="PLACEHOLDER_ROOT/index.html" id="logo-link" aria-label="العودة إلى الصفحة الرئيسية">
+      <img src="PLACEHOLDER_ROOT/logo.png" alt="شعار مكتبة مراقي المعرفة" class="logo-img" id="logo-img">
+      <span class="logo-text">مكتبة مراقي المعرفة</span>
+    </a>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="تبديل الوضع الداكن أو الفاتح" title="تبديل مظهر الموقع">
+      <span class="theme-icon sun-icon" aria-hidden="true">☀️</span>
+      <span class="theme-icon moon-icon" aria-hidden="true">🌙</span>
+      <span class="theme-text" id="theme-text">المظهر</span>
+    </button>
+  </div>
 </header>

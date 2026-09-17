@@ -2,6 +2,7 @@
   {
     "id": "book1",
     "title": "مفتاح إقامة الصلاة",
+    "author": "",
     "category": "إيماني",
     "cover": "book1.png",
     "drive_id": "https://drive.google.com/file/d/1FCQs-OpeDXx4t43sYpwKRjuhBIvUP3Pn/view?usp=sharing"
@@ -9,6 +10,7 @@
   {
     "id": "book2",
     "title": "مختصر الداء والدواء",
+    "author": "",
     "category": "إيماني",
     "cover": "book2.png",
     "drive_id": "https://drive.google.com/file/d/1y7WTITWe52g6_H3a0rxuDRqbD8tuWu7T/view?usp=sharing"
@@ -16,15 +18,16 @@
   {
     "id": "book3",
     "title": "صور وخواطر",
+    "author": "",
     "category": "أدبي",
     "cover": "book3.png",
     "drive_id": "https://drive.google.com/file/d/1PSwwVYwieywnbAnyFgqKLXA3qE4tgmzR/view?usp=sharing"
   },
   {
     "table": [
-      { "book": "مفتاح إقامة الصلاة", "duration": "7 أيام", "start_date": "الأحد 1/27", "end_date": "الأحد 2/5" },
-      { "book": "مختصر الداء والدواء",               "duration": "10 أيام", "start_date": "الإثنين 2/6", "end_date": "الخميس 2/16" },
-      { "book": "صور وخواطر",                    "duration": "14 يوم", "start_date": "الجمعة 2/17", "end_date": "الأحد 3/3" }
+      { "book": "مفتاح إقامة الصلاة", "duration": "", "start_date": "", "end_date": "", "task": "" },
+      { "book": "مختصر الداء والدواء", "duration": "", "start_date": "", "end_date": "", "task": "" },
+      { "book": "صور وخواطر",        "duration": "", "start_date": "", "end_date": "", "task": "" }
     ]
   }
 ]

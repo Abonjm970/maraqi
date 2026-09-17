@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مكتبة المرحلة الثانوية — مراقي المعرفة</title>
-  <meta name="description" content="حقائب القراءة للمرحلة الثانوية في برنامج مراقي المعرفة — سلوك وإيمان وعلم ومهارات وسيرة.">
+  <title>مكتبة المرحلة الثانوية — مكتبة مراقي المعرفة</title>
+  <meta name="description" content="حقائب القراءة للمرحلة الثانوية في برنامج مكتبة مراقي المعرفة — سلوك وإيمان وعلم ومهارات وسيرة.">
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('maraqi-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
   <link rel="stylesheet" href="../style.css">
   <link rel="icon" type="image/png" href="../logo.png">
 </head>
@@ -87,23 +95,12 @@
   </main>
 
   <footer>
-    <p>برنامج مراقي المعرفة القرائي</p>
+    <p>برنامج مكتبة مراقي المعرفة القرائي</p>
   </footer>
 
+  <script src="../main.js"></script>
   <script>
-    (function loadHeader() {
-      var root = '..';
-      fetch('../header.html')
-        .then(r => { if (!r.ok) throw new Error(); return r.text(); })
-        .then(html => {
-          var ph = document.getElementById('header-placeholder');
-          if (ph) ph.outerHTML = html.replaceAll('PLACEHOLDER_ROOT', root);
-        })
-        .catch(() => {
-          var ph = document.getElementById('header-placeholder');
-          if (ph) ph.innerHTML = `<header id="site-header"><a href="../index.html"><img src="../logo.png" alt="شعار مراقي المعرفة" class="logo-img"><span class="logo-text">مراقي المعرفة</span></a></header>`;
-        });
-    })();
+    initHeader('..');
   </script>
 
 </body>

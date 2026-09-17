@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مراقي المعرفة — البرنامج القرائي</title>
-  <meta name="description" content="برنامج مراقي المعرفة - ملتقى كيان الشبابي">
+  <title>مكتبة مراقي المعرفة — البرنامج القرائي</title>
+  <meta name="description" content="مكتبة مراقي المعرفة - ملتقى كيان الشبابي">
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('maraqi-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="logo.png">
 </head>
@@ -17,16 +25,16 @@
     <!-- قسم الاقتباس -->
     <section class="hero container">
       <blockquote class="hero-quote animate-in">
-        فمن طلبَ العلمَ ليحيي به الإسلامَ فهو من الصِّدِّيقين، ودرجتُه بعد درجة النبوَّة.
-        <cite class="hero-quote-source">— مفتاح دار السعادة (١/٣٣٩)</cite>
+        «مَا أَعْلَمُ عَمَلًا أَفْضَلَ مِنْ طَلَبِ الْعِلْمِ وَحِفْظِهِ لِمَنْ أَرَادَ اللَّهَ تَعَالَى بِهِ خَيْرًا»
+        <cite class="hero-quote-source">— سفيان الثوري رحمه الله [مسند الدارمي ١ / ٣٥٢]</cite>
       </blockquote>
     </section>
 
-    <!-- قسم المكتبتين -->
+    <!-- قسم أقسام المكتبة -->
     <section class="container" aria-labelledby="libraries-heading">
       <div class="divider" aria-hidden="true">✦</div>
       <h1 class="page-title" id="libraries-heading" style="text-align:center; margin-bottom: var(--space-3);">
-        اختر <span>مكتبتك</span>
+        أقسام <span>المكتبة</span>
       </h1>
       <p class="page-subtitle" style="text-align:center;">
         اختر المرحلة الدراسية المناسبة للوصول إلى حقائب القراءة
@@ -71,24 +79,12 @@
   </main>
 
   <footer>
-    <p>برنامج مراقي المعرفة القرائي</p>
+    <p>برنامج مكتبة مراقي المعرفة القرائي</p>
   </footer>
 
+  <script src="main.js"></script>
   <script>
-    // حقن الهيدر المشترك
-    (function loadHeader() {
-      var root = '';
-      fetch('header.html')
-        .then(r => { if (!r.ok) throw new Error('header fetch failed'); return r.text(); })
-        .then(html => {
-          var ph = document.getElementById('header-placeholder');
-          if (ph) ph.outerHTML = html.replaceAll('PLACEHOLDER_ROOT', root || '.');
-        })
-        .catch(() => {
-          var ph = document.getElementById('header-placeholder');
-          if (ph) ph.innerHTML = `<header id="site-header"><a href="index.html"><img src="logo.png" alt="شعار مراقي المعرفة" class="logo-img"><span class="logo-text">مراقي المعرفة</span></a></header>`;
-        });
-    })();
+    initHeader('.');
   </script>
 
 </body>
