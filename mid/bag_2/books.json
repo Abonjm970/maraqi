@@ -2,7 +2,7 @@
   {
     "id": "book1",
     "title": "مفتاح إقامة الصلاة",
-    "author": "",
+    "author": "خالد بن عبد الكريم اللاحم",
     "category": "إيماني",
     "cover": "book1.png",
     "drive_id": "https://drive.google.com/file/d/1FCQs-OpeDXx4t43sYpwKRjuhBIvUP3Pn/view?usp=sharing"
@@ -10,7 +10,7 @@
   {
     "id": "book2",
     "title": "مختصر الداء والدواء",
-    "author": "",
+    "author": "أحمد بن عثمان المزيد",
     "category": "إيماني",
     "cover": "book2.png",
     "drive_id": "https://drive.google.com/file/d/1y7WTITWe52g6_H3a0rxuDRqbD8tuWu7T/view?usp=sharing"
@@ -18,7 +18,7 @@
   {
     "id": "book3",
     "title": "صور وخواطر",
-    "author": "",
+    "author": "علي الطنطاوي",
     "category": "أدبي",
     "cover": "book3.png",
     "drive_id": "https://drive.google.com/file/d/1PSwwVYwieywnbAnyFgqKLXA3qE4tgmzR/view?usp=sharing"

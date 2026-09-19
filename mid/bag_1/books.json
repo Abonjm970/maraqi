@@ -2,7 +2,7 @@
   {
     "id": "book1",
     "title": "قضِّ نهارك مع ابن المبارك",
-    "author": "",
+    "author": "حمزة بن فايع الفتحي",
     "category": "تراجم",
     "cover": "book1.png",
     "drive_id": "https://drive.google.com/file/d/1c2rOTUyr2tTyIIiNtH_4phOZXGw3a7xu/view?usp=sharing"
@@ -10,7 +10,7 @@
   {
     "id": "book2",
     "title": "شباب الصحابة",
-    "author": "",
+    "author": "محمد بن عبد الله الدويش",
     "category": "تراجم",
     "cover": "book2.png",
     "drive_id": "https://drive.google.com/file/d/1UX5lY_neY0gB9Tn2mfx5ObGaY5SnfWLY/view?usp=sharing"
@@ -18,7 +18,7 @@
   {
     "id": "book3",
     "title": "50 شمعة",
-    "author": "",
+    "author": "عبد الكريم بكار",
     "category": "سلوك",
     "cover": "book3.png",
     "drive_id": "https://drive.google.com/file/d/1PSwwVYwieywnbAnyFgqKLXA3qE4tgmzR/view?usp=sharing"

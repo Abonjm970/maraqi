@@ -2,7 +2,7 @@
   {
     "id": "book1",
     "title": "حين أضاء الكون",
-    "author": "",
+    "author": "مشعل بن عبد العزيز الفلاحي",
     "category": "سيرة",
     "cover": "book1.png",
     "drive_id": "https://drive.google.com/file/d/1fyGPvTJ0WH1SKx_Tj5A7-eba3pwoD5ki/view?usp=sharing"
@@ -10,7 +10,7 @@
   {
     "id": "book2",
     "title": "الوابل الصيب",
-    "author": "",
+    "author": "ابن القيم الجوزية",
     "category": "إيماني",
     "cover": "book2.png",
     "drive_id": "https://drive.google.com/file/d/16Ql-MipaMQtws2R9SfCq96Nvy9Dvcy0a/view?usp=sharing"
@@ -18,7 +18,7 @@
   {
     "id": "book3",
     "title": "مختصر جامع العلوم والحكم",
-    "author": "",
+    "author": "محمد بن سليمان بن عبد الله المهنا",
     "category": "علمي",
     "cover": "book3.png",
     "drive_id": "https://drive.google.com/file/d/1GM8gkqH25JB2pqsOkMHU8_AEY0ovnaE5/view?usp=sharing"
