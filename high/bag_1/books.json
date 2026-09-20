@@ -25,7 +25,7 @@
   },
   {
     "table": [
-      { "book": "الانضباط الذاتي",            "duration": "", "start_date": "", "end_date": "", "task": "" },
+      { "book": "الانضباط الذاتي",            "duration": "10 أيام", "start_date": "الأحد 9 / 4", "end_date": "الأربعاء", "task": "" },
       { "book": "مواعظ عمر بن عبد العزيز",    "duration": "", "start_date": "", "end_date": "", "task": "" },
       { "book": "سيرة العتيق أبي بكر الصديق", "duration": "", "start_date": "", "end_date": "", "task": "" }
     ]
