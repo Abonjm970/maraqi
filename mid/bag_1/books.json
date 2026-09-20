@@ -25,7 +25,7 @@
   },
   {
     "table": [
-      { "book": "قضِّ نهارك مع ابن المبارك", "duration": "", "start_date": "", "end_date": "", "task": "" },
+      { "book": "قضِّ نهارك مع ابن المبارك", "duration": "14 يوم", "start_date": "الأحد 9 / 4", "end_date": "23 / 4", "task": "" },
       { "book": "شباب الصحابة",               "duration": "", "start_date": "", "end_date": "", "task": "" },
       { "book": "50 شمعة",                    "duration": "", "start_date": "", "end_date": "", "task": "" }
     ]
