@@ -21,11 +21,11 @@
     "author": "علي الطنطاوي",
     "category": "أدبي",
     "cover": "book3.png",
-    "drive_id": "https://drive.google.com/file/d/1PSwwVYwieywnbAnyFgqKLXA3qE4tgmzR/view?usp=sharing"
+    "drive_id": "https://drive.google.com/file/d/1W9XQKPCjZoy4l2Sh9xQc_dXwrZ9RWKAl/view?usp=sharing"
   },
   {
     "table": [
-      { "book": "مفتاح إقامة الصلاة", "duration": "17 يوم", "start_date": "الأحد 9 / 4", "end_date": "الأربعاء 26 / 4", "task": "" },
+      { "book": "مفتاح إقامة الصلاة", "duration": "", "start_date": "", "end_date": "", "task": "" },
       { "book": "مختصر الداء والدواء", "duration": "", "start_date": "", "end_date": "", "task": "" },
       { "book": "صور وخواطر",        "duration": "", "start_date": "", "end_date": "", "task": "" }
     ]
